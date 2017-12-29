@@ -36,7 +36,7 @@ class BankAccount(threading.Thread):
         time.sleep(3)
 
         
-doug =BankAccount("Doug", 1)
+dog = BankAccount("Dog", 1)
 paul = BankAccount("Paul", 100)
 sally = BankAccount("Sally",50)
 
@@ -44,11 +44,11 @@ doug.start()
 paul.start()
 sally.start()
 
-#doug.join()
-#paul.join()
-#sally.join()
-#join() waits for current thread to stop executing before starting a new thread
+doug.join()
+paul.join()
+sally.join()
+# join() waits for current thread to stop executing before starting a new thread
 #sounds like your defeating the point of threads
-
+#join in this case actually makes no difference to print out
 
 print("execution ends")
